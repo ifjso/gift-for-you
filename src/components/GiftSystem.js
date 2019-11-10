@@ -41,8 +41,8 @@ const useStyles = makeStyles(theme => ({
 
 const greetingTexts = [
   '인증되었습니다.',
-  '안녕하세요 미아님 😄',
-  '미아님께 드릴 선물이 있습니다. 받으시겠어요?'
+  '안녕하세요, ㅁㅇ님 😄',
+  'ㅁㅇ님께 드릴 작은 선물이 있습니다. 받아주시겠습니까?'
 ];
 
 const wait = async ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -169,7 +169,7 @@ const GiftSystem = () => {
             open={snackbarOpen}
             autoHideDuration={2000}
             onClose={() => setSnackbarOpen(false)}
-            message="다시 한번 생각해보세요."
+            message="잘못 누르신 거죠!?"
           />
         </Paper>
       </main>

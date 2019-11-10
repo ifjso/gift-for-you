@@ -31,7 +31,7 @@ const QuestionForm = ({ question, answer, onNext }) => {
     [error]
   );
   const onClick = useCallback(() => {
-    if (value.trim() === answer) {
+    if (value.toLowerCase().trim() === answer) {
       setValue('');
       setError(false);
       onNext();
