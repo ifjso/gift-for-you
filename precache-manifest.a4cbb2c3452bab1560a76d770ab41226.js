@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c7423ee5b7e337b446ae8367cceb51a4",
+    "revision": "b273e9b8bf9f0fd8d1cda15fc8dfd310",
     "url": "/gift-for-you/index.html"
   },
   {
-    "revision": "d786bb9d0f7a08497452",
+    "revision": "d7629637f8aaa4a42cb3",
     "url": "/gift-for-you/static/css/main.34de6062.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gift-for-you/static/js/2.1eaf8296.chunk.js"
   },
   {
-    "revision": "d786bb9d0f7a08497452",
-    "url": "/gift-for-you/static/js/main.b5bc995d.chunk.js"
+    "revision": "d7629637f8aaa4a42cb3",
+    "url": "/gift-for-you/static/js/main.90dbf7c0.chunk.js"
   },
   {
     "revision": "9032ea164cdf9aa334fc",
