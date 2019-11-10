@@ -33,14 +33,7 @@ const GiftSystem = () => {
   const [activeStep, setActiveStep] = useState(0);
   const currentQuestion = questions[activeStep];
 
-  const onConfirm = useCallback(
-    isCorrect => {
-      if (isCorrect) {
-        setActiveStep(activeStep + 1);
-      }
-    },
-    [activeStep]
-  );
+  const onNext = useCallback(() => setActiveStep(activeStep + 1), [activeStep]);
 
   return (
     <>
@@ -57,7 +50,7 @@ const GiftSystem = () => {
           <QuestionForm
             question={currentQuestion.question}
             answer={currentQuestion.answer}
-            onConfirm={onConfirm}
+            onNext={onNext}
           />
         </Paper>
       </main>

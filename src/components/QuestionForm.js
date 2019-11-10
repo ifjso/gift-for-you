@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
@@ -15,8 +15,19 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const QuestionForm = ({ question, answer, onConfirm }) => {
+const QuestionForm = ({ question, answer, onNext }) => {
   const classes = useStyles();
+  const [value, setValue] = useState('');
+  const textField = useRef(null);
+
+  const onChange = useCallback(e => setValue(e.target.value), []);
+  const onClick = useCallback(() => {
+    if (value.trim() === answer) {
+      setValue('');
+      textField.current.focus();
+      onNext();
+    }
+  }, [answer, onNext, value]);
 
   return (
     <>
@@ -31,6 +42,9 @@ const QuestionForm = ({ question, answer, onConfirm }) => {
             fullWidth
             label="답변"
             margin="normal"
+            inputRef={textField}
+            value={value}
+            onChange={onChange}
           />
         </Grid>
       </Grid>
@@ -39,7 +53,7 @@ const QuestionForm = ({ question, answer, onConfirm }) => {
           className={classes.button}
           variant="contained"
           color="primary"
-          onClick={() => onConfirm(true)}
+          onClick={onClick}
         >
           확인
         </Button>
