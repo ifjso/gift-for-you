@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 const QuestionForm = ({ question, answer, onNext }) => {
   const classes = useStyles();
   const [value, setValue] = useState('');
-  const textField = useRef(null);
+  const textField = useRef();
 
   const onChange = useCallback(e => setValue(e.target.value), []);
   const onClick = useCallback(() => {
