@@ -43,6 +43,15 @@ const QuestionForm = ({ question, answer, onNext }) => {
     textField.current.focus();
   }, [answer, onNext, value]);
 
+  const onKeyPress = useCallback(
+    e => {
+      if (e.key === 'Enter') {
+        onClick();
+      }
+    },
+    [onClick]
+  );
+
   return (
     <>
       <Typography variant="h2" align="center">
@@ -59,8 +68,9 @@ const QuestionForm = ({ question, answer, onNext }) => {
             inputRef={textField}
             value={value}
             error={error}
-            helperText={error ? '틀렸어요.' : ''}
+            helperText={error ? '아닌거 같아요.' : ''}
             onChange={onChange}
+            onKeyPress={onKeyPress}
           />
         </Grid>
       </Grid>
