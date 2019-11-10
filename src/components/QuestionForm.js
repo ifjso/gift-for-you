@@ -18,15 +18,29 @@ const useStyles = makeStyles(theme => ({
 const QuestionForm = ({ question, answer, onNext }) => {
   const classes = useStyles();
   const [value, setValue] = useState('');
+  const [error, setError] = useState(false);
   const textField = useRef();
 
-  const onChange = useCallback(e => setValue(e.target.value), []);
+  const onChange = useCallback(
+    e => {
+      setValue(e.target.value);
+      if (error) {
+        setError(false);
+      }
+    },
+    [error]
+  );
   const onClick = useCallback(() => {
     if (value.trim() === answer) {
       setValue('');
-      textField.current.focus();
+      setError(false);
       onNext();
+    } else {
+      setValue('');
+      setError(true);
     }
+
+    textField.current.focus();
   }, [answer, onNext, value]);
 
   return (
@@ -44,6 +58,8 @@ const QuestionForm = ({ question, answer, onNext }) => {
             margin="normal"
             inputRef={textField}
             value={value}
+            error={error}
+            helperText={error ? '틀렸어요.' : ''}
             onChange={onChange}
           />
         </Grid>
