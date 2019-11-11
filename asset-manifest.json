@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/gift-for-you/static/css/main.34de6062.chunk.css",
-    "main.js": "/gift-for-you/static/js/main.90dbf7c0.chunk.js",
-    "main.js.map": "/gift-for-you/static/js/main.90dbf7c0.chunk.js.map",
+    "main.js": "/gift-for-you/static/js/main.ac67e6fe.chunk.js",
+    "main.js.map": "/gift-for-you/static/js/main.ac67e6fe.chunk.js.map",
     "runtime-main.js": "/gift-for-you/static/js/runtime-main.edba1299.js",
     "runtime-main.js.map": "/gift-for-you/static/js/runtime-main.edba1299.js.map",
     "static/js/2.1eaf8296.chunk.js": "/gift-for-you/static/js/2.1eaf8296.chunk.js",
     "static/js/2.1eaf8296.chunk.js.map": "/gift-for-you/static/js/2.1eaf8296.chunk.js.map",
     "index.html": "/gift-for-you/index.html",
-    "precache-manifest.a4cbb2c3452bab1560a76d770ab41226.js": "/gift-for-you/precache-manifest.a4cbb2c3452bab1560a76d770ab41226.js",
+    "precache-manifest.148258746d48190e3f5f5b26e9bbfe9f.js": "/gift-for-you/precache-manifest.148258746d48190e3f5f5b26e9bbfe9f.js",
     "service-worker.js": "/gift-for-you/service-worker.js",
     "static/css/main.34de6062.chunk.css.map": "/gift-for-you/static/css/main.34de6062.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.edba1299.js",
     "static/js/2.1eaf8296.chunk.js",
     "static/css/main.34de6062.chunk.css",
-    "static/js/main.90dbf7c0.chunk.js"
+    "static/js/main.ac67e6fe.chunk.js"
   ]
 }
